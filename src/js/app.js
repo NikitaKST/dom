@@ -1,11 +1,11 @@
-import Field from './Board.js';
+import Field from './Board';
 
 const cells = Array.from(document.querySelectorAll('.cell'));
 
 const field = new Field(cells);
 
 document.addEventListener('DOMContentLoaded', () => {
-  const interval = setInterval(() => {
+  setInterval(() => {
     field.deleteActiveClass();
     field.addActiveClass();
   }, 1000);
